@@ -1,4 +1,4 @@
-import { getFromLocalStorage, saveToLocaleStorage, updateCartIcon } from "./helper.js";
+import { displayCartTotal, getFromLocalStorage, saveToLocaleStorage, updateCartIcon } from "./helper.js";
 import { renderCartItems } from "./ui.js";
 
 let cart = getFromLocalStorage();
@@ -25,6 +25,8 @@ const addToCart = (e,products) => {
          cart.push(cartItem);
 
          updateCartIcon(cart);
+
+         
       }
    } 
   
@@ -49,6 +51,8 @@ const removeFromCart = (e) => {
   renderCartItems(cart);
 
   updateCartIcon(cart);
+
+  displayCartTotal(cart);
 };
 
 const onQuantityChange=(e)=>{
@@ -67,6 +71,8 @@ const onQuantityChange=(e)=>{
       saveToLocaleStorage(cart);
 
       updateCartIcon(cart);
+
+      displayCartTotal(cart);
    }
 
 

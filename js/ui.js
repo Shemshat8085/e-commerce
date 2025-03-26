@@ -5,6 +5,7 @@ const elements = {
     menu: document.querySelector(".navbar"),
     productList: document.querySelector("#product-list"),
     cartContainer: document.querySelector(".cart-items"),
+    cartTotal: document.querySelector("#cart-totally"),
 } 
 
 

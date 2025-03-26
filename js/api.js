@@ -5,8 +5,7 @@ try {
     
 
     const data = await res.json();
-    
-    
+        
     return data;
 } catch (error) {
     alert(`Error: ${error}`);

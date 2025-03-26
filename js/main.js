@@ -1,6 +1,6 @@
-import fetchProducts from "./api.js";
+import fetchProducts  from "./api.js";
 import { addToCart } from "./cart.js";
-import { getFromLocalStorage, updateCartIcon } from "./helper.js";
+import { displayCartTotal, getFromLocalStorage, updateCartIcon } from "./helper.js";
 import { elements, renderCartItems, renderProducts } from "./ui.js";
 
 
@@ -11,15 +11,19 @@ elements.menuIcon.addEventListener("click", () => {
     elements.menu.classList.toggle("open-menu");
 });
 
+const cart = getFromLocalStorage();
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
    
 
     if(window.location.pathname.includes("/cart.html")){
-       const cart = getFromLocalStorage();
+       
 
        renderCartItems(cart);
+
+       displayCartTotal(cart);
 
     } else {
         fetchProducts().then((products)=>{
@@ -30,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((error)=>{
             console.log(`Error: ${error}`);
-        })
+        });
         
     }
 
@@ -38,6 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 
-fetchProducts();
+
 
 

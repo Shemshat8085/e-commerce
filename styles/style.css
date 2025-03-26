@@ -93,6 +93,9 @@ header .nav #cart-icon::after {
   .cart-box {
     grid-template-columns: 1fr !important;
   }
+  .footer-c {
+    grid-template-columns: 1fr !important;
+  }
 }
 @media (max-width: 550px) {
   #menu-icon {
@@ -201,7 +204,7 @@ header .nav #cart-icon::after {
 }
 
 .cart-container {
-  margin-top: 50px !important;
+  margin-top: 100px !important;
 }
 .cart-container .tohomepage {
   display: flex;
@@ -283,6 +286,49 @@ header .nav #cart-icon::after {
   font-size: 32px;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.footer {
+  background-color: #273ea1;
+  padding: 40px 10px;
+  margin-top: 50px;
+}
+.footer-c {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  gap: 16px;
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer-box h2 {
+  font-size: 128px;
+  color: #fff;
+}
+.footer-box .social {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.footer-box .social i {
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  color: #273ea1;
+  border-radius: 50%;
+}
+.footer-box h3 {
+  color: #fff;
+}
+.footer-box a {
+  color: #fff;
+  padding-top: 30px;
+}
+.footer .copyright {
+  padding-top: 30px;
+  color: #fff;
 }
 
 * {
